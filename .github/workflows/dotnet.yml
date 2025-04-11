@@ -24,6 +24,8 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Publish
+      run: dotnet publish -c Release -o public /p:BasePath=/Entregable8/
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
       with:
